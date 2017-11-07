@@ -1,6 +1,6 @@
 
 years = []
-with open("election_year_id.txt", "r") as f:
+with open("ELECTION_ID", "r") as f:
     items = f.read().split('\n')
     for item in items:
         if item!= "":
@@ -18,7 +18,7 @@ for county in counties:
 
 for year in years:
     
-    filename = "year_" + year + ".csv"
+    filename = "president_general_" + year + ".csv"
     header = pd.read_csv(filename, nrows = 1).dropna(axis = 1)
     d = header.iloc[0].to_dict()
         

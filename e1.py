@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_doc.text, 'html.parser')
 table = soup.find('table', {'id':'search_results_table'})
 
-output = open("election_year_id.txt","w")
+output = open("ELECTION_ID","w")
 
 for tr in table.find_all('tr', 'election_item'):
     

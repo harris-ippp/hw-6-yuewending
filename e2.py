@@ -1,5 +1,5 @@
 entries = []
-with open("election_year_id.txt", "r") as f:
+with open("ELECTION_ID", "r") as f:
     items = f.read().split('\n')
     for item in items:
         entries.append(item.split())
@@ -12,6 +12,6 @@ for entry in entries:
         continue
         
     html_doc = requests.get(url % (entry[1]))
-    with open("year_" + entry[0] + ".csv", "w") as f:
+    with open("president_general_" + entry[0] + ".csv", "w") as f:
         f.write(html_doc.text)
     
